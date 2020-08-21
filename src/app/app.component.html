@@ -331,9 +331,7 @@
     </svg>
 
     <span>{{ title }} app is up!</span>
-    <h1>Welcome to the {{title}}</h1>
-    <p>Wlecome to the {{course}}</p>
-
+    
     <svg id="rocket-smoke" alt="Rocket Ship Smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
     </svg>
@@ -344,15 +342,35 @@
  
 
 </div>
-<p>Hello</p>
-<app-home></app-home>
+<h1 [style.color]="flag?'green': 'red'">Welcome to the {{title}}</h1>
+    <p>Wlecome to the {{course}}</p>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<h2 [style.color]="color">Hello from binding</h2>
+Interpolation <input type="text" value={{course}} id="textbox1" disabled={{flag}}/>
+<br>
+Property Binding <input type="text" [value]=title id="textbox2" />
+<div [class]="myclass">Hello from class binding</div>
+<p>Event Binding
+  <!-- <button (click)='show()'>Press the button</button> -->
+</p>
+<table>
+  <tr>
+    <th> NAme</th>
+    <th>course</th>
+    <th>Contact</th>
+  </tr>
+  <tr>
+    <td> Waffles</td>
+    <th>Angular</th>
+    <th>Email</th>
+  </tr>
+</table>
+<!-- <button (click)="showdata()">Press for Data</button> -->
+
+
+<app-home></app-home>
+<app-about><p>
+  Hello
+</p></app-about>
 
 
